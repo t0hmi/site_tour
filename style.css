@@ -21,11 +21,20 @@
          url('font/roboto-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-html{
+@font-face {
+    font-family: 'Barlow';
+    src: url('font/Barlow/Barlow-Bold.ttf') format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body{
     scroll-behavior : smooth;
+    padding: 0;
+    margin: 0;
 }
 /*------- HEADER -----*/
 header{
@@ -36,12 +45,35 @@ header{
     color: white;   
 }
 
-li a{
+#navbarNav ul li{
+    margin: 0 2vw;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+#navbarNav ul li::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #FF3E3E;
+    transform: scaleX(0);
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#navbarNav ul li:hover::after,
+#navbarNav ul li:active::after{
+    transform: scale(1);
+}
+#navbarNav ul li a {
+    position: relative;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.5em;
-    font-family: 'robotolight';
+    font-size: 1.5vw;
+    font-family: 'Barlow';
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
 .navbar-nav:hover li:not(:hover) a{
@@ -49,9 +81,10 @@ li a{
 }
 
 .navbar-nav li:hover a{
- opacity: 1; 
-     text-decoration: none;
+    opacity: 1; 
+    text-decoration: none;
     color: #FF3E3E;
+    
 }
 
 
@@ -119,6 +152,36 @@ main button span{
 /*---- SECTION DETAILS ROCKET -----*/
 section{
  background: black;   
+}
+
+section div p{
+    position: absolute;
+    width: 30%;
+    color: white;
+    padding: 1em;
+    background-color : black;
+    border: solid 2px #FF3E3E;
+    border-radius: 10px;
+    visibility: hidden;
+}
+#textReservoir{
+    left: 5%;
+    top: 3%;
+}
+
+#textCabine{
+    right: 5%;
+    top: 30%;
+}
+
+#textReacteur{
+    left: 5%;
+    bottom: 15%;
+}
+
+#textReacteurFusee{
+    right: 5%;
+    bottom: 20%;
 }
 @media screen and (max-width: 990px){
     
