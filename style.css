@@ -23,6 +23,10 @@
     font-style: normal;
 
 }
+
+html{
+    scroll-behavior : smooth;
+}
 /*------- HEADER -----*/
 header{
     background-color: black;   
@@ -39,10 +43,19 @@ li a{
     font-size: 1.5em;
     font-family: 'robotolight';
     }
-li a:hover{
-    text-decoration: none;
+
+.navbar-nav:hover li:not(:hover) a{
+ opacity: 0.5;   
+}
+
+.navbar-nav li:hover a{
+ opacity: 1; 
+     text-decoration: none;
     color: #FF3E3E;
-    }
+}
+
+
+
 /*----- TEXTE + BOUTTON ACCEUIL ----*/
 main{
     position: relative;
@@ -74,6 +87,14 @@ main button{
     padding: 10px;
 }
 
+@keyframes animButton{
+ from{
+     background: black ;
+ }
+    to{
+       background : #FFD233;
+    }
+}
 main button span{
  color:   #FFD233;
  font-family:  'robotoblack';
@@ -93,8 +114,17 @@ main button span{
 .scroll-pls img{
  padding: 5px;  
 }
+
+
+/*---- SECTION DETAILS ROCKET -----*/
+section{
+ background: black;   
+}
 @media screen and (max-width: 990px){
     
+    .navbar-nav:hover li:not(:hover) a{
+     opacity: 1;   
+    }
         li a{
         text-decoration: none;
         color: #FF3E3E;

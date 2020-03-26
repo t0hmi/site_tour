@@ -13,16 +13,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/9fc8294f3b.js" crossorigin="anonymous"></script>
 </head>
 <header>
 <nav class="navbar navbar-expand-lg navbar-light" >
   <img src="images/LOGOSPACE1.png" class="img-fluid col-5 col-md-3 col-lg-1">
   <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border : solid 2px #FF3E3E;">
-   <!-- <span class="navbar-toggler-icon">
-
-     <!--- <i class="fas fa-rocket fa-2x" style="color:#FF3E3E;"></i>
-      </span> -->
+  
       <img src="images/start-up.png" width="50" height="50" class="img-fluid">
   </button>
   <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
@@ -49,10 +45,16 @@
 <main>
     <div class="d-flex flex-column col-lg-8 col-md-8" >
     <p class="align-self-center col-lg-5 text-center">The space and our professional team are waiting for you !</p>
-        <button class="align-self-center"> Discover <span>now</span> </button>
+        <button class="align-self-center" onclick="windows.location.href='#' "> Discover <span>now</span> </button>
     </div>
     <div class="scroll-pls">    <img src="images/scroll.png" class="img-fluid"> </div>
-    
 </main>
+<section class="d-flex justify-content-center">
+    <img usemap="#shuttle" src="images/fusee.png" class="img-fluid justify-content-center"> 
+    <map name="shuttle">
+        <area shape="poly" coords="742,30,640,300,840,300" href="#">
+    
+    </map>
+</section>
 </body>
 </html>
