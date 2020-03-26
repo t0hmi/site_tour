@@ -1,0 +1,220 @@
+/*--- IMPORTATION DES FONTs ----*/
+@font-face {
+    font-family: 'robotolight';
+    src: url('font/roboto-light-webfont.woff2') format('woff2'),
+         url('font/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotobold';
+    src: url('font/roboto-bold-webfont.woff2') format('woff2'),
+         url('font/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotoblack';
+    src: url('font/roboto-black-webfont.woff2') format('woff2'),
+         url('font/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('font/Barlow/Barlow-Bold.ttf') format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body{
+    scroll-behavior : smooth;
+    padding: 0;
+    margin: 0;
+}
+/*------- HEADER -----*/
+header{
+    background-color: black;   
+}
+
+.nav-link{
+    color: white;   
+}
+
+#navbarNav ul li{
+    margin: 0 2vw;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+#navbarNav ul li::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #FF3E3E;
+    transform: scaleX(0);
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#navbarNav ul li:hover::after,
+#navbarNav ul li:active::after{
+    transform: scale(1);
+}
+#navbarNav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+    font-family: 'Barlow';
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+.navbar-nav:hover li:not(:hover) a{
+ opacity: 0.5;   
+}
+
+.navbar-nav li:hover a{
+    opacity: 1; 
+    text-decoration: none;
+    color: #FF3E3E;
+    
+}
+
+
+
+/*----- TEXTE + BOUTTON ACCEUIL ----*/
+main{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    background-image: url(images/espaceFusee.jpg);
+    background-size: cover;
+}
+
+
+main p{
+ color: white; 
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'robotobold';
+}
+main div{
+    position: absolute;
+    top: 15vh;
+}
+main button{
+    background: black;
+    border: solid 3px #FF3E3E;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 1em;
+    padding: 10px;
+}
+
+@keyframes animButton{
+ from{
+     background: black ;
+ }
+    to{
+       background : #FFD233;
+    }
+}
+main button span{
+ color:   #FFD233;
+ font-family:  'robotoblack';
+    font-weight: bold;
+}
+.scroll-pls{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border: solid 2px black;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.7;
+    left: 50%;
+    top: 85%;
+}
+.scroll-pls img{
+ padding: 5px;  
+}
+
+
+/*---- SECTION DETAILS ROCKET -----*/
+section{
+ background: black;   
+}
+
+section div p{
+    position: absolute;
+    width: 30%;
+    color: white;
+    padding: 1em;
+    background-color : black;
+    border: solid 2px #FF3E3E;
+    border-radius: 10px;
+    visibility: hidden;
+}
+#textReservoir{
+    left: 5%;
+    top: 3%;
+}
+
+#textCabine{
+    right: 5%;
+    top: 30%;
+}
+
+#textReacteur{
+    left: 5%;
+    bottom: 15%;
+}
+
+#textReacteurFusee{
+    right: 5%;
+    bottom: 20%;
+}
+@media screen and (max-width: 990px){
+    
+    .navbar-nav:hover li:not(:hover) a{
+     opacity: 1;   
+    }
+        li a{
+        text-decoration: none;
+        color: #FF3E3E;
+    }
+    li a:hover{
+        text-decoration: none;
+        color: #FF3E3E;
+    }
+    li{
+        margin: 1.5em;
+        text-align: center;
+    }
+    .navbar-nav{
+        background-color: #000000;
+        border-top: solid #FF3E3E 3px;
+    }
+    button:active img{
+        transform: rotateZ(5deg);
+    }
+    main{
+        background : url(images/espaceFusee.jpg) 50% ;
+        background-size: cover;
+    }
+    main div{
+        top: 5vh;
+    }
+    .scroll-pls{
+     position: 60%;   
+    }
+}
